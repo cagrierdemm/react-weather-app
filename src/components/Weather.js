@@ -87,7 +87,7 @@ function Weather() {
                     <>
                       <div className={`${theme}Box col-lg-3 flex-fill mb-3 mx-2 col-sm-3 p-4 d-flex align-items-center`}>
                         <div className='row d-flex align-items-center'>
-                          <h3 className='col-7 fw-bold fs-4'><span className='color1 fw-light fs-6'>Görüş Mesafesi: </span>{Math.round((temps.list[0].visibility) / 1000) + " km"}</h3>
+                          <h3 className='col-7 fw-bold fs-4'><span className='color1 fw-light fs-6'>Görüş Mesafesi: </span><br />{Math.round((temps.list[0].visibility) / 1000) + " km"}</h3>
                           <div className='col-5'>
                             <img src={process.env.PUBLIC_URL + '/goz.png'} className='img-fluid' alt='eye icon' />
                           </div>
