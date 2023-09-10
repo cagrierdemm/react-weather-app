@@ -16,10 +16,13 @@ A simple Weather App built with React and Bootstrap
 ## Preview
 
 Light:
-![onizleme.jpg](./public/light.jpg)
+![light.jpg](./public/light.jpg)
 
 Dark:
-![onizleme.jpg](./public/dark.jpg)
+![dark.jpg](./public/dark.jpg)
+
+Mobile:
+![mobile.jpg](./public/mobile.jpg)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

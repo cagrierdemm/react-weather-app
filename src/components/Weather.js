@@ -127,7 +127,7 @@ function Weather() {
               </div>
 
             </div>
-            <div className='col-lg-4 col-md-12 p-5'>
+            <div className='col-lg-4 col-md-12 px-5 pt-md-5'>
               <div className={`${theme}Box row`}>
                 <h3 className='p-4 color1 text-uppercase fs-5 fw-bold text-center'>5 Günlük Hava Tahmini</h3>
                 {temps.list && temps.list.slice(1).filter((_, i) => i % 8 === 0).map((day, i) => (
@@ -139,7 +139,7 @@ function Weather() {
                     {i !== temps.list.length / 8 - 1 && <hr />}
                   </div>
                 ))}</div>
-              <div className='row mt-5 justify-content-center align-items-center'>
+              <div className='row my-5 justify-content-center align-items-center'>
                 <div className='col-2' >
                   <a href="https://www.github.com/cagrierdemm"><img src={process.env.PUBLIC_URL + '/github.png'} className='img-fluid logo' alt='github icon' /></a>
                 </div>

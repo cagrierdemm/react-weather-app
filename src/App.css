@@ -4,6 +4,12 @@
   font-family: 'Poppins', sans-serif;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    margin: 10px; /* Sadece 768 piksel veya daha küçük ekranlarda margin ekler */
+  }
+}
+
 body {
   background: linear-gradient(90deg, #00CCFF 0%, #0D9DE3 100%);
   display: grid;
