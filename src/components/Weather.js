@@ -70,7 +70,7 @@ function Weather() {
                   {temps.list &&
                     <>
                       <div className='col-lg-4 col-sm-4 float-center text-center'>
-                        <img className="img-fluid " src={`https://openweathermap.org/img/wn/${temps.list[0].weather[0].icon}@4x.png`} alt='current weather icon' /></div>
+                        <img className="img-fluid " src={`https://openweathermap.org/img/wn/${temps.list[0].weather[0].icon.slice(0, 2)}d@4x.png`} alt='current weather icon' /></div>
                       <div className="col-lg-4 col-sm-4">
                         <h1 className='display-1 fw-bold text-center'>{temps.list && Math.round(temps.list[0].main.temp) + "°"}</h1>
                       </div>
@@ -133,7 +133,7 @@ function Weather() {
                 {temps.list && temps.list.slice(1).filter((_, i) => i % 8 === 0).map((day, i) => (
                   <div key={i} className='row mx-auto d-flex align-items-center justify-content-center'>
                     <h5 className='color1 col-3 text-start fs-6'>{daysOfWeek[(today + i + 1) % 7]}</h5>
-                    <div className="col-3"><img src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`} alt='weather icon' /></div>
+                    <div className="col-3"><img src={`https://openweathermap.org/img/wn/${day.weather[0].icon.slice(0, 2)}d@2x.png`} alt='weather icon' /></div>
                     <h6 className='color1 col-3 ps-4 text-start fs-6 fw-light'>{day.weather[0].description}</h6>
                     <h4 className='col-3 fw-bold'>{day && Math.round(day.main.temp) + "°"}</h4>
                     {i !== temps.list.length / 8 - 1 && <hr />}
