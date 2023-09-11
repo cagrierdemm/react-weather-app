@@ -4,11 +4,41 @@
   font-family: 'Poppins', sans-serif;
 }
 
+
 @media screen and (max-width: 768px) {
   body {
-    margin: 10px; /* Sadece 768 piksel veya daha küçük ekranlarda margin ekler */
+    margin: 10px;
+    /* Margin for mobile screens */
   }
 }
+
+/* ---------- For those using screen size at 125% and 150% ---------- */
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+  body {
+    transform: scale(0.75);   
+  }
+  .container{
+    top: -35px;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 1.5) {
+  body {
+    transform: scale(0.60);   
+  }
+  .container{
+    top: -120px;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+
+/* ---------- For those using screen size at 125% and 150% ---------- */
 
 body {
   background: linear-gradient(90deg, #00CCFF 0%, #0D9DE3 100%);
