@@ -52,10 +52,10 @@ function Weather() {
             <div className='col-lg-8 col-md-12 p-5 pe-lg-0'>
               <div className={`${theme}Box`}>
                 <div className='row'>
-                  <div className='row col-lg-6 col-sm-6 d-flex align-items-center'>
-                    <h1 className='float-start ps-5 ms-4 pt-2'>{city}</h1>
+                  <div className='row col-lg-6 col-sm-12 d-flex align-items-center'>
+                    <h1 className='text-center pt-2'>{city}</h1>
                   </div>
-                  <div className='col-lg-6 col-sm-6 ms-4 ps-5 pt-4 pb-3 '>
+                  <div className='col-lg-6 col-sm-12 float-center text-center pt-4 pb-3 '>
                     <label className='me-3' htmlFor='sehir'>Şehir seçiniz:</label>
                     <select id='sehir' onChange={(e) => setCity(e.target.value) || localStorage.setItem("city", e.target.value)} value={localStorage.getItem("city") || "Adana"}>
                       {cities.map((x) => (
@@ -89,7 +89,7 @@ function Weather() {
                         <div className='row d-flex align-items-center'>
                           <h3 className='col-7 fw-bold fs-4'><span className='color1 fw-light fs-6'>Görüş Mesafesi: </span><br />{Math.round((temps.list[0].visibility) / 1000) + " km"}</h3>
                           <div className='col-5'>
-                            <img src={process.env.PUBLIC_URL + '/goz.png'} className='img-fluid' alt='eye icon' />
+                            <img src={process.env.PUBLIC_URL + '/goz.png'} className={`img-fluid ${theme}Logo2`} alt='eye icon' />
                           </div>
                         </div>
                       </div>
@@ -97,7 +97,7 @@ function Weather() {
                         <div className='row d-flex align-items-center'>
                           <h3 className='col-7 fw-bold fs-4 '><span className='color1 fw-light fs-5'>Nem: </span><br />{temps.list[0].main.humidity + "%"}</h3>
                           <div className='col-5'>
-                            <img src={process.env.PUBLIC_URL + '/nem.png'} className='img-fluid' alt='humidity icon' />
+                            <img src={process.env.PUBLIC_URL + '/nem.png'} className={`img-fluid ${theme}Logo2`} alt='humidity icon' />
                           </div>
                         </div>
                       </div>
@@ -105,7 +105,7 @@ function Weather() {
                         <div className='row d-flex align-items-center'>
                           <h3 className='col-7 fw-bold fs-4 '><span className='color1 fw-light fs-5'>Basınç: </span><br />{temps.list[0].main.pressure + " mb"}</h3>
                           <div className='col-5'>
-                            <img src={process.env.PUBLIC_URL + '/basinc.png'} className='img-fluid' alt='pressure icon' />
+                            <img src={process.env.PUBLIC_URL + '/basinc.png'} className={`img-fluid ${theme}Logo2`} alt='pressure icon' />
                           </div>
                         </div>
                       </div>
@@ -141,12 +141,12 @@ function Weather() {
                 ))}</div>
               <div className='row my-5 justify-content-center align-items-center'>
                 <div className='col-2' >
-                  <a href="https://www.github.com/cagrierdemm"><img src={process.env.PUBLIC_URL + '/github.png'} className='img-fluid logo' alt='github icon' /></a>
+                  <a href="https://www.github.com/cagrierdemm"><img src={process.env.PUBLIC_URL + '/github.png'} className={`img-fluid logo ${theme}Logo`} alt='github icon' /></a>
                 </div>
                 <div className='col-2'>
-                  <a href="https://www.linkedin.com/in/cagrierdemm/"><img src={process.env.PUBLIC_URL + '/linkedin.png'} className='img-fluid logo' alt='linkedin icon' /></a>
+                  <a href="https://www.linkedin.com/in/cagrierdemm/"><img src={process.env.PUBLIC_URL + '/linkedin.png'} className={`img-fluid logo ${theme}Logo`} alt='linkedin icon' /></a>
                 </div>
-                <div className='col-8  d-flex align-items-center justify-content-end'>
+                <div className='col-8 d-flex align-items-center justify-content-end'>
                   <h6 className=' me-3 ms-2 mt-2'>Dark Mode</h6>
                   <label className="switch">
                     <input type="checkbox" id="mode-switch" onClick={() => setTheme(theme === "light" ? "dark" : "light")} defaultChecked={(theme === "dark")} />
